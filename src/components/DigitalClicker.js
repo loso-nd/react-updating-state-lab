@@ -7,10 +7,16 @@ class DigitalClicker extends Component {
         timesClicked: 0
     }
 
+    // handleClick =() => {
+    //     let clickUpdate =  this.state.timesClicked + 1
+    //     this.setState({
+    //         timesClicked: clickUpdate
+    //     })
+    // }
+
     handleClick =() => {
-        let clickUpdate =  this.state.timesClicked + 1
-        this.setState({
-            timesClicked: clickUpdate
+        this.setState( prevState => {
+           return { timesClicked : prevState.timesClicked + 1} 
         })
     }
 
